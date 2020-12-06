@@ -31,3 +31,8 @@ class Person:
         mgl = self.magic[i]["dmg"] - 5
         mgh = self.magic[i]["dmg"] + 5
         return random.randrange(mgl, mgh)
+
+    def take_damage(self,dmg):
+        self.hp -= dmg
+        if self.hp < 0:
+            return self.hp
